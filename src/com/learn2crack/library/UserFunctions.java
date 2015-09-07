@@ -6,12 +6,15 @@ package com.learn2crack.library;
  * Website:www.learn2crack.com
  **/
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Context;
+
+import javax.net.ssl.SSLContext;
 
 
 public class UserFunctions {
@@ -32,8 +35,8 @@ public class UserFunctions {
 
     
     //URL of the PHP API WORKING!!!!!!
-    private static String loginURL = "http://unps.comli.com/learn2crack_login_api/index.php";
-    private static String registerURL = "http://unps.comli.com/learn2crack_login_api/index.php";
+    private static String loginURL = "http://10.0.2.2:9000/signin";
+    private static String registerURL = "http://10.0.2.2:9000/signup";
     private static String forpassURL = "http://unps.comli.com/learn2crack_login_api/index.php";
     private static String chgpassURL = "http://unps.comli.com/learn2crack_login_api/index.php";
     
@@ -55,17 +58,61 @@ public class UserFunctions {
         jsonParser = new JSONParser();
     }
 
+    private static JSONObject getJsonObjectFromMap(Map params) throws JSONException {
+
+        //all the passed parameters from the post request
+        //iterator used to loop through all the parameters
+        //passed in the post request
+        Iterator iter = params.entrySet().iterator();
+
+        //Stores JSON
+        JSONObject holder = new JSONObject();
+
+        //using the earlier example your first entry would get email
+        //and the inner while would get the value which would be 'foo@bar.com'
+        //{ fan: { email : 'foo@bar.com' } }
+
+        //While there is another entry
+        while (iter.hasNext())
+        {
+            //gets an entry in the params
+            Map.Entry pairs = (Map.Entry)iter.next();
+
+            //creates a key for Map
+            String key = (String)pairs.getKey();
+
+            //Create a new map
+            Map m = (Map)pairs.getValue();
+
+            //object for storing Json
+            JSONObject data = new JSONObject();
+
+            //gets the value
+            Iterator iter2 = m.entrySet().iterator();
+            while (iter2.hasNext())
+            {
+                Map.Entry pairs2 = (Map.Entry)iter2.next();
+                data.put((String)pairs2.getKey(), (String)pairs2.getValue());
+            }
+
+            //puts email and 'foo@bar.com'  together in map
+            holder.put(key, data);
+        }
+        return holder;
+    }
     /**
      * Function to Login
      **/
 
-    public JSONObject loginUser(String email, String password){
+    public JSONObject loginUser(String email, String password) throws JSONException {
         // Building Parameters
-        List<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("tag", login_tag));
-        params.add(new BasicNameValuePair("email", email));
-        params.add(new BasicNameValuePair("password", password));
-        JSONObject json = jsonParser.getJSONFromUrl(loginURL,params);
+        JSONObject jsonObjSend = new JSONObject();
+        jsonObjSend.put("email",email.toString());
+        jsonObjSend.put("password",password.toString());
+
+        JSONObject json=jsonParser.getJSONFromUrl(loginURL, jsonObjSend);
+
+        //System.out.println("from userFunction.login"+json);
         return json;
     }
 
@@ -80,6 +127,7 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("newpas", newpas));
         params.add(new BasicNameValuePair("email", email));
         JSONObject json = jsonParser.getJSONFromUrl(chgpassURL,params);
+
         return json;
     }
 
@@ -117,6 +165,15 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("uname", uname));
         params.add(new BasicNameValuePair("password", password));
         JSONObject json = jsonParser.getJSONFromUrl(registerURL,params);
+        return json;
+    }
+
+    public JSONObject registerUser(String email, String password) throws JSONException {
+        // Building Parameters
+        JSONObject jsonObjectSend  = new JSONObject();
+        jsonObjectSend.put("email",password.toString());
+        jsonObjectSend.put("password",password.toString());
+        JSONObject json = jsonParser.getJSONFromUrl(registerURL,jsonObjectSend);
         return json;
     }
 

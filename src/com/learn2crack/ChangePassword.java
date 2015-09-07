@@ -166,11 +166,11 @@ public class ChangePassword extends Activity {
 
 
             UserFunctions userFunction = new UserFunctions();
-            JSONObject json = userFunction.chgPass(newpas, email);
-            Log.d("Button", "Register");
-            return json;
+//            JSONObject json = userFunction.chgPass(newpas, email);
+//            Log.d("Button", "Register");
+//            return json;
 
-
+        return null;
         }
 
 

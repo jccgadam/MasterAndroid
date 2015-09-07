@@ -11,6 +11,17 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.util.Log;
+import com.learn2crack.library.JSONParser;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
@@ -25,6 +36,12 @@ import android.widget.Toast;
 import com.learn2crack.library.DatabaseHandler;
 import com.learn2crack.library.UserFunctions;
 
+import java.io.UnsupportedEncodingException;
+import java.util.*;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -41,15 +58,19 @@ public class Login extends Activity {
     /**
      * Called when the activity is first created.
      */
-    private static String KEY_SUCCESS = "success";
+    private static String KEY_SUCCESS = "login successfully";
     private static String KEY_UID = "uid";
     private static String KEY_USERNAME = "uname";
     private static String KEY_FIRSTNAME = "fname";
     private static String KEY_LASTNAME = "lname";
     private static String KEY_EMAIL = "email";
     private static String KEY_CREATED_AT = "created_at";
-
-
+    private static String login_tag = "login";
+    private static String register_tag = "register";
+    private static String forpass_tag = "forpass";
+    private static String chgpass_tag = "chgpass";
+    private static String loginURL = "http://localhost:9000/signin";
+    private JSONParser jsonParser =new JSONParser();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -180,7 +201,7 @@ public class Login extends Activity {
 
         private ProgressDialog pDialog;
 
-        String email,password;
+        String email, password;
 
         @Override
         protected void onPreExecute() {
@@ -199,54 +220,105 @@ public class Login extends Activity {
         }
 
         @Override
-        protected JSONObject doInBackground(String... args) {
+        protected JSONObject doInBackground(String...params) {
 
             UserFunctions userFunction = new UserFunctions();
-            JSONObject json = userFunction.loginUser(email, password);
-            return json;
-        }
 
-        @Override
-        protected void onPostExecute(JSONObject json) {
+            JSONObject json = null;
             try {
-               if (json.getString(KEY_SUCCESS) != null) {
-
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if(Integer.parseInt(res) == 1){
-                        pDialog.setMessage("Loading User Space");
-                        pDialog.setTitle("Getting Data");
-                        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-                        JSONObject json_user = json.getJSONObject("user");
-                        /**
-                         * Clear all previous data in SQlite database.
-                         **/
-                        UserFunctions logout = new UserFunctions();
-                        logout.logoutUser(getApplicationContext());
-                        db.addUser(json_user.getString(KEY_FIRSTNAME),json_user.getString(KEY_LASTNAME),json_user.getString(KEY_EMAIL),json_user.getString(KEY_USERNAME),json_user.getString(KEY_UID),json_user.getString(KEY_CREATED_AT));
-                       /**
-                        *If JSON array details are stored in SQlite it launches the User Panel.
-                        **/
-                        Intent upanel = new Intent(getApplicationContext(), Main.class);
-                        upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        pDialog.dismiss();
-                        startActivity(upanel);
-                        /**
-                         * Close Login Screen
-                         **/
-                        finish();
-                    }else{
-
-                        pDialog.dismiss();
-                        loginErrorMsg.setText("Incorrect username/password");
-                    }
-                }
+                json = userFunction.loginUser(email, password);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-       }
+
+            return json;
+        }
+
+
+        @Override
+        protected void onPostExecute(JSONObject json) {
+
+            if(1 == 1){
+                pDialog.setMessage("Loading User Space");
+                pDialog.setTitle("Getting Data");
+//                        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+//                        JSONObject json_user = json.getJSONObject("user");
+                /**
+                 * Clear all previous data in SQlite database.
+                 **/
+                UserFunctions logout = new UserFunctions();
+                logout.logoutUser(getApplicationContext());
+//                        db.addUser(json_user.getString(KEY_FIRSTNAME),json_user.getString(KEY_LASTNAME),json_user.getString(KEY_EMAIL),json_user.getString(KEY_USERNAME),json_user.getString(KEY_UID),json_user.getString(KEY_CREATED_AT));
+               /**
+                *If JSON array details are stored in SQlite it launches the User Panel.
+                **/
+                Intent upanel = new Intent(getApplicationContext(), Main.class);
+                upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                pDialog.dismiss();
+                startActivity(upanel);
+                /**
+                 * Close Login Screen
+                 **/
+                finish();
+            }else{
+
+                pDialog.dismiss();
+                loginErrorMsg.setText("Incorrect username/password");
+            }
+
+
+        }
     }
     public void NetAsync(View view){
+
         new NetCheck().execute();
     }
+
+
+
+
+
 }
+//    private static JSONObject getJsonObjectFromMap(Map params) throws JSONException {
+//
+//        //all the passed parameters from the post request
+//        //iterator used to loop through all the parameters
+//        //passed in the post request
+//        Iterator iter = params.entrySet().iterator();
+//
+//        //Stores JSON
+//        JSONObject holder = new JSONObject();
+//
+//        //using the earlier example your first entry would get email
+//        //and the inner while would get the value which would be 'foo@bar.com'
+//        //{ fan: { email : 'foo@bar.com' } }
+//
+//        //While there is another entry
+//        while (iter.hasNext())
+//        {
+//            //gets an entry in the params
+//            Map.Entry pairs = (Map.Entry)iter.next();
+//
+//            //creates a key for Map
+//            String key = (String)pairs.getKey();
+//
+//            //Create a new map
+//            Map m = (Map)pairs.getValue();
+//
+//            //object for storing Json
+//            JSONObject data = new JSONObject();
+//
+//            //gets the value
+//            Iterator iter2 = m.entrySet().iterator();
+//            while (iter2.hasNext())
+//            {
+//                Map.Entry pairs2 = (Map.Entry)iter2.next();
+//                data.put((String)pairs2.getKey(), (String)pairs2.getValue());
+//            }
+//
+//            //puts email and 'foo@bar.com'  together in map
+//            holder.put(key, data);
+//        }
+//        return holder;
+//    }
+//}

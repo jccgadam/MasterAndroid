@@ -163,9 +163,9 @@ private static String KEY_ERROR = "error";
 
 
                         UserFunctions userFunction = new UserFunctions();
-                        JSONObject json = userFunction.forPass(forgotpassword);
-                        return json;
-
+//                        JSONObject json = userFunction.forPass(forgotpassword);
+//                        return json;
+                    return null;
 
                     }
 

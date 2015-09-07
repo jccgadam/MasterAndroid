@@ -103,33 +103,36 @@ public class Register extends Activity {
          * Another toast is set to alert Username must be 5 characters.
          **/
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnRegister.setOnClickListener(new View
+
+                .OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (  ( !inputUsername.getText().toString().equals("")) && ( !inputPassword.getText().toString().equals("")) && ( !inputFirstName.getText().toString().equals("")) && ( !inputLastName.getText().toString().equals("")) && ( !inputEmail.getText().toString().equals("")) )
-                {
-                    if ( inputUsername.getText().toString().length() > 4 ){
-                    	if(isValidEmail(inputEmail.getText())){
-                    		NetAsync(view);
-                        	
-                        }else{
-                        	Toast.makeText(getApplicationContext(),
-                                    "Write a valid Email", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),
-                                "Username should be minimum 5 characters", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "One or more fields are empty", Toast.LENGTH_SHORT).show();
-                }
+//                if (  ( !inputUsername.getText().toString().equals("")) && ( !inputPassword.getText().toString().equals("")) && ( !inputFirstName.getText().toString().equals("")) && ( !inputLastName.getText().toString().equals("")) && ( !inputEmail.getText().toString().equals("")) )
+//                {
+//                    if ( inputUsername.getText().toString().length() > 4 ){
+//                    	if(isValidEmail(inputEmail.getText())){
+//                    		NetAsync(view);
+//
+//                        }else{
+//                        	Toast.makeText(getApplicationContext(),
+//                                    "Write a valid Email", Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                    }
+//                    else
+//                    {
+//                        Toast.makeText(getApplicationContext(),
+//                                "Username should be minimum 5 characters", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//                else
+//                {
+//                    Toast.makeText(getApplicationContext(),
+//                            "One or more fields are empty", Toast.LENGTH_SHORT).show();
+//                }
+                NetAsync(view);
             }
         });
        }
@@ -238,11 +241,11 @@ public class Register extends Activity {
             super.onPreExecute();
             inputUsername = (EditText) findViewById(R.id.uname);
             inputPassword = (EditText) findViewById(R.id.pword);
-               fname = inputFirstName.getText().toString();
-               lname = inputLastName.getText().toString();
-                email = inputEmail.getText().toString();
-                uname= inputUsername.getText().toString();
-                password = inputPassword.getText().toString();
+            fname = inputFirstName.getText().toString();
+            lname = inputLastName.getText().toString();
+            email = inputEmail.getText().toString();
+            uname= inputUsername.getText().toString();
+            password = inputPassword.getText().toString();
             pDialog = new ProgressDialog(Register.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Registering ...");
@@ -256,7 +259,12 @@ public class Register extends Activity {
 
 
         UserFunctions userFunction = new UserFunctions();
-        JSONObject json = userFunction.registerUser(fname, lname, email, uname, password);
+            JSONObject json = null;
+            try {
+                json = userFunction.registerUser(email,password);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
             return json;
 
