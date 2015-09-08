@@ -36,57 +36,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b88c5ae-0904-4edf-b5b8-c476e2b7f57f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Learn2CrackLogin.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/learn2crack/Manifest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/_name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v4_dbf1b92a913ffd07a84daf7831f420fb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$1.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$2.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$NetCheck.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$NetCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$ProcessRegister.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword$ProcessRegister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/ChangePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/library/JSONParser.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/library/JSONParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/Learn2CrackLogin.apk" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/Learn2CrackLogin.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Answer/Answer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Category/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Question/Question.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/Learn2CrackLogin.apk" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/Learn2CrackLogin.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/Learn2CrackLogin.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$1.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$2.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$3.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$NetCheck.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$NetCheck.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$ProcessLogin.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login$ProcessLogin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main$1.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main$2.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset$1.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset$NetCheck.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset$NetCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset$ProcessRegister.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset$ProcessRegister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/PasswordReset.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/R$id.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$1.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$2.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$NetCheck.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$NetCheck.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$ProcessRegister.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register$ProcessRegister.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Registered$1.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Registered$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Registered.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Registered.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/library/UserFunctions.class" afterPath="$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/library/UserFunctions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/learn2crack/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/learn2crack/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/learn2crack/ChangePassword.java" afterPath="$PROJECT_DIR$/src/com/learn2crack/ChangePassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java" afterPath="$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Learn2CrackLogin.iml" afterPath="$PROJECT_DIR$/Learn2CrackLogin.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/learn2crack/Login.java" afterPath="$PROJECT_DIR$/src/com/learn2crack/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/learn2crack/PasswordReset.java" afterPath="$PROJECT_DIR$/src/com/learn2crack/PasswordReset.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/learn2crack/Register.java" afterPath="$PROJECT_DIR$/src/com/learn2crack/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java" afterPath="$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/res/layout/activity_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/registered.xml" afterPath="$PROJECT_DIR$/res/layout/registered.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/register.xml" afterPath="$PROJECT_DIR$/res/layout/register.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Learn2CrackLogin.iws" />
@@ -114,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Login.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="260" column="20" selection-start-line="260" selection-start-column="20" selection-end-line="260" selection-end-column="20" />
+              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,40 +94,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Register.java">
+      <file leaf-file-name="_project" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_project">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6117647">
-              <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-              <folding>
-                <element signature="e#3033#4418#0" expanded="true" />
-                <element signature="e#4417#4418#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-2.6785715">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFunctions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java">
+      <file leaf-file-name="proguard-project.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proguard-project.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java">
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Register.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+              <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4615386">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4225352">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -173,9 +183,21 @@
         <option value="$PROJECT_DIR$/src/com/learn2crack/ChangePassword.java" />
         <option value="$PROJECT_DIR$/src/com/learn2crack/PasswordReset.java" />
         <option value="$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java" />
-        <option value="$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java" />
+        <option value="$PROJECT_DIR$/src/userPackage/userClass.java" />
+        <option value="$PROJECT_DIR$/src/userPackage/Users.java" />
+        <option value="$PROJECT_DIR$/src/userPackage/User.java" />
+        <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/index.js" />
+        <option value="$PROJECT_DIR$/res/layout/index.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/src/Category/Category.java" />
+        <option value="$PROJECT_DIR$/src/Answer/Answer.java" />
+        <option value="$PROJECT_DIR$/src/Question/Question.java" />
         <option value="$PROJECT_DIR$/src/com/learn2crack/Login.java" />
+        <option value="$PROJECT_DIR$/res/layout/register.xml" />
         <option value="$PROJECT_DIR$/src/com/learn2crack/Register.java" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java" />
       </list>
     </option>
   </component>
@@ -183,14 +205,21 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1535" />
-    <option name="height" value="876" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -199,7 +228,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -215,31 +244,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Learn2CrackLogin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Learn2CrackLogin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Learn2CrackLogin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Changed Files">
           <PATH>
@@ -278,7 +282,74 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learn2crack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learn2CrackLogin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,9 +361,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../gson-2.3.1.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="false" />
@@ -614,11 +685,15 @@
       <workItem from="1441557051794" duration="10233000" />
       <workItem from="1441574742743" duration="2667000" />
       <workItem from="1441664328547" duration="842000" />
+      <workItem from="1441667547469" duration="2401000" />
+      <workItem from="1441734549505" duration="7475000" />
+      <workItem from="1441745478585" duration="2237000" />
+      <workItem from="1441747987068" duration="1412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27621000" />
+    <option name="totallyTimeSpent" value="41146000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -630,12 +705,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1535" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953784" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866243" sideWeight="0.49771988" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -646,17 +722,16 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4242038" sideWeight="0.6188925" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42292994" sideWeight="0.6188925" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2558607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2558607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866243" sideWeight="0.49250814" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296417" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -683,6 +758,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -697,10 +788,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-          <folding>
-            <element signature="e#3033#4418#0" expanded="true" />
-            <element signature="e#4417#4418#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,36 +854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn2CrackLogin.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/registered.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33188722">
           <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2997947">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -815,17 +877,6 @@
         <state vertical-scroll-proportion="-0.50993377">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8804781">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../Android/Sdk/platforms/android-15/android.jar!/org/apache/http/NameValuePair.class">
@@ -884,40 +935,238 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java">
+    <entry file="file://$PROJECT_DIR$/../../../../RealtimeQAPlatform_test/app/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../RealtimeQAPlatform_test/app/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89411765">
+          <caret line="73" column="1" selection-start-line="10" selection-start-column="0" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../RealtimeQAPlatform_test/app/models/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89411765">
+          <caret line="88" column="1" selection-start-line="15" selection-start-column="0" selection-end-line="88" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#221#231#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/learn2crack/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6705883">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
+        <state vertical-scroll-proportion="1.6525424">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Answer/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Question/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Category/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31764707">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy://Learn2CrackLogin/Learn2CrackLogin/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6766917">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Learn2CrackLogin/com/learn2crack/Register.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.285714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/register.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037783377">
+          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learn2CrackLogin.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24590164">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35929647">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="260" column="20" selection-start-line="260" selection-start-column="20" selection-end-line="260" selection-end-column="20" />
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/Register.java">
+    <entry file="file://$PROJECT_DIR$/_project">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6117647">
-          <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-          <folding>
-            <element signature="e#3033#4418#0" expanded="true" />
-            <element signature="e#4417#4418#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-2.6785715">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4615386">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07042254">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/learn2crack/library/UserFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80985916">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4225352">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -962,7 +1211,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>Android API 15 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

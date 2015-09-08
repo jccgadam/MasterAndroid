@@ -109,30 +109,24 @@ public class Register extends Activity {
             @Override
             public void onClick(View view) {
 
-//                if (  ( !inputUsername.getText().toString().equals("")) && ( !inputPassword.getText().toString().equals("")) && ( !inputFirstName.getText().toString().equals("")) && ( !inputLastName.getText().toString().equals("")) && ( !inputEmail.getText().toString().equals("")) )
-//                {
-//                    if ( inputUsername.getText().toString().length() > 4 ){
-//                    	if(isValidEmail(inputEmail.getText())){
-//                    		NetAsync(view);
-//
-//                        }else{
-//                        	Toast.makeText(getApplicationContext(),
-//                                    "Write a valid Email", Toast.LENGTH_SHORT).show();
-//                        }
-//
-//                    }
-//                    else
-//                    {
-//                        Toast.makeText(getApplicationContext(),
-//                                "Username should be minimum 5 characters", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//                else
-//                {
-//                    Toast.makeText(getApplicationContext(),
-//                            "One or more fields are empty", Toast.LENGTH_SHORT).show();
-//                }
-                NetAsync(view);
+                if    ( (!inputPassword.getText().toString().equals("")) && ( !inputFirstName.getText().toString().equals("")) && ( !inputLastName.getText().toString().equals("")) && ( !inputEmail.getText().toString().equals(""))) {
+
+                    if (isValidEmail(inputEmail.getText())) {
+                        NetAsync(view);
+
+                    } else {
+                        Toast.makeText(getApplicationContext(),
+                                "Write a valid Email", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),
+                            "One or more fields are empty", Toast.LENGTH_SHORT).show();
+                }
+               // NetAsync(view);
             }
         });
        }
@@ -239,12 +233,11 @@ public class Register extends Activity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            inputUsername = (EditText) findViewById(R.id.uname);
+
             inputPassword = (EditText) findViewById(R.id.pword);
             fname = inputFirstName.getText().toString();
             lname = inputLastName.getText().toString();
             email = inputEmail.getText().toString();
-            uname= inputUsername.getText().toString();
             password = inputPassword.getText().toString();
             pDialog = new ProgressDialog(Register.this);
             pDialog.setTitle("Contacting Servers");
@@ -257,11 +250,10 @@ public class Register extends Activity {
         @Override
         protected JSONObject doInBackground(String... args) {
 
-
         UserFunctions userFunction = new UserFunctions();
             JSONObject json = null;
             try {
-                json = userFunction.registerUser(email,password);
+                json = userFunction.registerUser(email,password,fname,lname);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -275,72 +267,67 @@ public class Register extends Activity {
        /**
         * Checks for success message.
         **/
-                try {
-                    if (json.getString(KEY_SUCCESS) != null) {
-                        registerErrorMsg.setText("");
-                        String res = json.getString(KEY_SUCCESS);
+           System.out.println(json);
+           if (1==1) {
+               registerErrorMsg.setText("");
+//                        String res = json.getString(KEY_SUCCESS);
+//
+//                        String red = json.getString(KEY_ERROR);
+                  if(1==1){
+//                        if(Integer.parseInt(res) == 1){
+                   pDialog.setTitle("Getting Data");
+                   pDialog.setMessage("Loading Info");
 
-                        String red = json.getString(KEY_ERROR);
-
-                        if(Integer.parseInt(res) == 1){
-                            pDialog.setTitle("Getting Data");
-                            pDialog.setMessage("Loading Info");
-
-                            registerErrorMsg.setText("Successfully Registered");
-
-
-                            DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-                            JSONObject json_user = json.getJSONObject("user");
-
-                            /**
-                             * Removes all the previous data in the SQlite database
-                             **/
-
-                            UserFunctions logout = new UserFunctions();
-                            logout.logoutUser(getApplicationContext());
-                            db.addUser(json_user.getString(KEY_FIRSTNAME),json_user.getString(KEY_LASTNAME),json_user.getString(KEY_EMAIL),json_user.getString(KEY_USERNAME),json_user.getString(KEY_UID),json_user.getString(KEY_CREATED_AT));
-                            /**
-                             * Stores registered data in SQlite Database
-                             * Launch Registered screen
-                             **/
-
-                            Intent registered = new Intent(getApplicationContext(), Registered.class);
-
-                            /**
-                             * Close all views before launching Registered screen
-                            **/
-                            registered.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            pDialog.dismiss();
-                            startActivity(registered);
+                   registerErrorMsg.setText("Successfully Registered");
 
 
-                              finish();
-                        }
+                   DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+                   //JSONObject json_user = json.getJSONObject("user");
 
-                        else if (Integer.parseInt(red) ==2){
-                            pDialog.dismiss();
-                            registerErrorMsg.setText("User already exists");
-                        }
-                        else if (Integer.parseInt(red) ==3){
-                            pDialog.dismiss();
-                            registerErrorMsg.setText("Invalid Email id");
-                        }
+                   /**
+                    * Removes all the previous data in the SQlite database
+                    **/
 
-                    }
+                   UserFunctions logout = new UserFunctions();
+                   logout.logoutUser(getApplicationContext());
+                   //db.addUser(json_user.getString(KEY_FIRSTNAME),json_user.getString(KEY_LASTNAME),json_user.getString(KEY_EMAIL),json_user.getString(KEY_USERNAME),json_user.getString(KEY_UID),json_user.getString(KEY_CREATED_AT));
+                   /**
+                    * Stores registered data in SQlite Database
+                    * Launch Registered screen
+                    **/
+
+                   Intent registered = new Intent(getApplicationContext(), Registered.class);
+
+                   /**
+                    * Close all views before launching Registered screen
+                   **/
+                   registered.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                   pDialog.dismiss();
+                   startActivity(registered);
 
 
-                        else{
-                        pDialog.dismiss();
+                     finish();
+               }
 
-                            registerErrorMsg.setText("Error occured in registration");
-                        }
+//                        else if (Integer.parseInt(red) ==2){
+//                            pDialog.dismiss();
+//                            registerErrorMsg.setText("User already exists");
+//                        }
+//                        else if (Integer.parseInt(red) ==3){
+//                            pDialog.dismiss();
+//                            registerErrorMsg.setText("Invalid Email id");
+//                        }
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
+           }
 
 
-                }
-            }}
+               else{
+               pDialog.dismiss();
+
+                   registerErrorMsg.setText("Error occured in registration");
+               }
+
+       }}
         public void NetAsync(View view){
             new NetCheck().execute();
         }}

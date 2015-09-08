@@ -46,7 +46,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import User.User;
 public class Login extends Activity {
 
     Button btnLogin;
@@ -238,32 +238,33 @@ public class Login extends Activity {
         @Override
         protected void onPostExecute(JSONObject json) {
 
-            if(1 == 1){
-                pDialog.setMessage("Loading User Space");
-                pDialog.setTitle("Getting Data");
-//                        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-//                        JSONObject json_user = json.getJSONObject("user");
-                /**
-                 * Clear all previous data in SQlite database.
-                 **/
-                UserFunctions logout = new UserFunctions();
-                logout.logoutUser(getApplicationContext());
-//                        db.addUser(json_user.getString(KEY_FIRSTNAME),json_user.getString(KEY_LASTNAME),json_user.getString(KEY_EMAIL),json_user.getString(KEY_USERNAME),json_user.getString(KEY_UID),json_user.getString(KEY_CREATED_AT));
-               /**
-                *If JSON array details are stored in SQlite it launches the User Panel.
-                **/
-                Intent upanel = new Intent(getApplicationContext(), Main.class);
-                upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                pDialog.dismiss();
-                startActivity(upanel);
-                /**
-                 * Close Login Screen
-                 **/
-                finish();
-            }else{
+            try {
+                if(json.getString("uId")!=null){
 
-                pDialog.dismiss();
-                loginErrorMsg.setText("Incorrect username/password");
+                    pDialog.setMessage("Loading User Space");
+                    pDialog.setTitle("Getting Data");
+                    User loginUser =new User();
+                    loginUser.setEmail(json.getString("email"));
+                    loginUser.setFirstName(json.getString("firstName"));
+                    loginUser.setLastName(json.get("lastName").toString());
+                    UserFunctions logout = new UserFunctions();
+                    logout.logoutUser(getApplicationContext());
+
+                    Intent upanel = new Intent(getApplicationContext(), Main.class);
+                    upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    pDialog.dismiss();
+                    startActivity(upanel);
+                    /**
+                     * Close Login Screen
+                     **/
+                    finish();
+                }else{
+
+                    pDialog.dismiss();
+                    loginErrorMsg.setText("Incorrect username/password");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
 

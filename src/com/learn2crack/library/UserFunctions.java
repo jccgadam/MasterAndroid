@@ -21,17 +21,7 @@ public class UserFunctions {
 
     private JSONParser jsonParser;
     
-  /*//URL of the PHP API WORKING LOCAL ASUS WAMPSERVER
-    private static String loginURL = "http://192.168.4.110/learn2crack_login_api/";
-    private static String registerURL = "http://192.168.4.110/learn2crack_login_api/";
-    private static String forpassURL = "http://192.168.4.110/learn2crack_login_api/";
-    private static String chgpassURL = "http://192.168.4.110/learn2crack_login_api/";*/
-    
-  /*//URL of the PHP API WORKING PERSONAL PC
-    private static String loginURL = "http://192.168.0.18:82/learn2crack_login_api/";
-    private static String registerURL = "http://192.168.0.18:82/learn2crack_login_api/";
-    private static String forpassURL = "http://192.168.0.18:82/learn2crack_login_api/";
-    private static String chgpassURL = "http://192.168.0.18:82/learn2crack_login_api/";*/
+
 
     
     //URL of the PHP API WORKING!!!!!!
@@ -40,11 +30,7 @@ public class UserFunctions {
     private static String forpassURL = "http://unps.comli.com/learn2crack_login_api/index.php";
     private static String chgpassURL = "http://unps.comli.com/learn2crack_login_api/index.php";
     
-    /*//URL of the PHP API WORKING!!!!!
-    private static String loginURL = "http://api.learn2crack.com/android/loginapi/";
-    private static String registerURL = "http://api.learn2crack.com/android/loginapi/";
-    private static String forpassURL = "http://api.learn2crack.com/android/loginapi/";
-    private static String chgpassURL = "http://api.learn2crack.com/android/loginapi/";*/
+
 
 
     private static String login_tag = "login";
@@ -155,24 +141,26 @@ public class UserFunctions {
      /**
       * Function to  Register
       **/
-    public JSONObject registerUser(String fname, String lname, String email, String uname, String password){
-        // Building Parameters
-        List<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("tag", register_tag));
-        params.add(new BasicNameValuePair("fname", fname));
-        params.add(new BasicNameValuePair("lname", lname));
-        params.add(new BasicNameValuePair("email", email));
-        params.add(new BasicNameValuePair("uname", uname));
-        params.add(new BasicNameValuePair("password", password));
-        JSONObject json = jsonParser.getJSONFromUrl(registerURL,params);
-        return json;
-    }
+//    public JSONObject registerUser(String fname, String lname, String email,String password){
+//        // Building Parameters
+//        List<NameValuePair> params = new ArrayList<NameValuePair>();
+//        params.add(new BasicNameValuePair("fname", fname));
+//        params.add(new BasicNameValuePair("lname", lname));
+//        params.add(new BasicNameValuePair("email", email));
+//        params.add(new BasicNameValuePair("password", password));
+//        JSONObject json = jsonParser.getJSONFromUrl(registerURL,params);
+//        System.out.print(json);
+//        return json;
+//    }
 
-    public JSONObject registerUser(String email, String password) throws JSONException {
+    public JSONObject registerUser(String email, String password,String fname, String lname) throws JSONException {
         // Building Parameters
         JSONObject jsonObjectSend  = new JSONObject();
-        jsonObjectSend.put("email",password.toString());
-        jsonObjectSend.put("password",password.toString());
+        jsonObjectSend.put("email",email);
+        jsonObjectSend.put("password",password);
+        jsonObjectSend.put("firstName",fname);
+        jsonObjectSend.put("lastName",lname);
+
         JSONObject json = jsonParser.getJSONFromUrl(registerURL,jsonObjectSend);
         return json;
     }
