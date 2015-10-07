@@ -1,4 +1,4 @@
-package com.learn2crack.library;
+package com.QAPlatform.library;
 
 /**
  * Created by Raj Amal on 5/30/13.
@@ -22,19 +22,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Database Name
-    private static final String DATABASE_NAME = "cloud_contacts";
+    private static final String DATABASE_NAME = "QA_platform";
 
     // Login table name
     private static final String TABLE_LOGIN = "login";
 
     // Login Table Columns names
-    private static final String KEY_ID = "id";
-    private static final String KEY_FIRSTNAME = "fname";
-    private static final String KEY_LASTNAME = "lname";
+    private static final String KEY_FIRSTNAME = "firstName";
+    private static final String KEY_LASTNAME = "lastName";
     private static final String KEY_EMAIL = "email";
-    private static final String KEY_USERNAME = "uname";
     private static final String KEY_UID = "uid";
-    private static final String KEY_CREATED_AT = "created_at";
+    private static final String KEY_CREDIT = "credit";
+    private static final String KEY_EXP = "exp";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -43,14 +42,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Creating Tables
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+        db.execSQL("DROP TABLE if exists"+TABLE_LOGIN);
         String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_LOGIN + "("
-                + KEY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_FIRSTNAME + " TEXT,"
                 + KEY_LASTNAME + " TEXT,"
+                + KEY_CREDIT + " TEXT,"
+                + KEY_EXP + " TEXT,"
                 + KEY_EMAIL + " TEXT UNIQUE,"
-                + KEY_USERNAME + " TEXT,"
-                + KEY_UID + " TEXT,"
-                + KEY_CREATED_AT + " TEXT" + ")";
+                + KEY_UID + " INTEGER PRIMARY KEY"
+                + ")";
+        System.out.println(CREATE_LOGIN_TABLE);
         db.execSQL(CREATE_LOGIN_TABLE);
     }
 
@@ -67,19 +69,20 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Storing user details in database
      * */
-    public void addUser(String fname, String lname, String email, String uname, String uid, String created_at) {
+    public void addUser(String fname, String lname, String email,String credit,String exp) {
+
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+
+
         values.put(KEY_FIRSTNAME, fname); // FirstName
         values.put(KEY_LASTNAME, lname); // LastName
         values.put(KEY_EMAIL, email); // Email
-        values.put(KEY_USERNAME, uname); // UserName
-        values.put(KEY_UID, uid); // Email
-        values.put(KEY_CREATED_AT, created_at); // Created At
-
+        values.put(KEY_CREDIT,credit);//credit
+        values.put(KEY_EXP,exp);//exp
         // Inserting Row
-        db.insert(TABLE_LOGIN, null, values);
+        db.insert(TABLE_LOGIN,null, values);
         db.close(); // Closing database connection
     }
 
@@ -94,14 +97,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         // Move to first row
+        System.out.println(cursor.getColumnCount());
         cursor.moveToFirst();
         if(cursor.getCount() > 0){
-            user.put("fname", cursor.getString(1));
-            user.put("lname", cursor.getString(2));
-            user.put("email", cursor.getString(3));
-            user.put("uname", cursor.getString(4));
-            user.put("uid", cursor.getString(5));
-            user.put("created_at", cursor.getString(6));
+            user.put("fname", cursor.getString(0));
+            user.put("lname",cursor.getString(1));
+            user.put("credit", cursor.getString(2));
+            user.put("exp", cursor.getString(3));
+            user.put("email", cursor.getString(4));
+
         }
         cursor.close();
         db.close();
@@ -142,4 +146,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+
+//    public void addUser(String email,String fname,String lname) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        ContentValues values = new ContentValues();
+//        values.put(KEY_EMAIL, email); // Email
+//        values.put(KEY_FIRSTNAME,fname);
+//        values.put(KEY_LASTNAME,lname);
+//        db.insert(TABLE_LOGIN,null, values);
+//        db.close(); // Closing database connection
+//    }
 }

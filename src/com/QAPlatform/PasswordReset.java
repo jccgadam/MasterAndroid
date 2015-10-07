@@ -1,4 +1,4 @@
-package com.learn2crack;
+package com.QAPlatform;
 
 /**
  * Author :Raj Amal
@@ -20,7 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.learn2crack.library.UserFunctions;
+import com.learn2crack.R;
+import com.QAPlatform.library.UserFunctions;
 
 import org.json.JSONException;
 import org.json.JSONObject;

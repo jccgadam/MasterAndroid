@@ -1,4 +1,4 @@
-package com.learn2crack;
+package com.QAPlatform;
 
 /**
  * Author :Raj Amal
@@ -11,6 +11,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.QAPlatform.library.DatabaseHandler;
+import com.learn2crack.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,8 +31,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.learn2crack.library.DatabaseHandler;
-import com.learn2crack.library.UserFunctions;
+import com.QAPlatform.library.UserFunctions;
+
+//import static com.learn2crack.R.id.register_error;
 
 public class Register extends Activity {
 
@@ -42,9 +45,8 @@ public class Register extends Activity {
 
     private static String KEY_SUCCESS = "success";
     private static String KEY_UID = "uid";
-    private static String KEY_FIRSTNAME = "fname";
-    private static String KEY_LASTNAME = "lname";
-    private static String KEY_USERNAME = "uname";
+    private static String KEY_FIRSTNAME = "firstName";
+    private static String KEY_LASTNAME = "lastName";
     private static String KEY_EMAIL = "email";
     private static String KEY_CREATED_AT = "created_at";
     private static String KEY_ERROR = "error";
@@ -68,19 +70,17 @@ public class Register extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.register);
+        setContentView(R.layout.register);
 
-    /**
-     * Defining all layout items
-     **/
+        /**
+         * Defining all layout items
+         **/
         inputFirstName = (EditText) findViewById(R.id.fname);
         inputLastName = (EditText) findViewById(R.id.lname);
-        inputUsername = (EditText) findViewById(R.id.uname);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.pword);
         btnRegister = (Button) findViewById(R.id.register);
         registerErrorMsg = (TextView) findViewById(R.id.register_error);
-        //emailstr = inputEmail.getText().toString();     
 
 
 /**
@@ -109,16 +109,18 @@ public class Register extends Activity {
             @Override
             public void onClick(View view) {
 
-                if    ( (!inputPassword.getText().toString().equals("")) && ( !inputFirstName.getText().toString().equals("")) && ( !inputLastName.getText().toString().equals("")) && ( !inputEmail.getText().toString().equals(""))) {
+                if (  (!inputPassword.getText().toString().equals("")) && ( !inputFirstName.getText().toString().equals("")) && ( !inputLastName.getText().toString().equals("")) && ( !inputEmail.getText().toString().equals("")) )
+                {
 
-                    if (isValidEmail(inputEmail.getText())) {
+                    if(isValidEmail(inputEmail.getText())){
                         NetAsync(view);
 
-                    } else {
+                    }else{
                         Toast.makeText(getApplicationContext(),
                                 "Write a valid Email", Toast.LENGTH_SHORT).show();
-                    }
 
+
+                    }
 
                 }
                 else
@@ -126,10 +128,10 @@ public class Register extends Activity {
                     Toast.makeText(getApplicationContext(),
                             "One or more fields are empty", Toast.LENGTH_SHORT).show();
                 }
-               // NetAsync(view);
+
             }
         });
-       }
+    }
     /**
      * Async Task to check whether internet connection is working
      **/
@@ -201,12 +203,9 @@ public class Register extends Activity {
                    +"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
                    +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
                    +"([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$";
-
      CharSequence inputStr = email;
-
      Pattern pattern = Pattern.compile(regExpn,Pattern.CASE_INSENSITIVE);
      Matcher matcher = pattern.matcher(inputStr);
-
      if(matcher.matches())
         return true;
      else
@@ -214,22 +213,21 @@ public class Register extends Activity {
 }*/
 
     public final static boolean isValidEmail(CharSequence target) {
-    	  if (TextUtils.isEmpty(target)) {
-    	    return false;
-    	  } else {
-    	    return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
-    	  }
-    	}
+        if (TextUtils.isEmpty(target)) {
+            return false;
+        } else {
+            return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+        }
+    }
 
 
     private class ProcessRegister extends AsyncTask<String, String, JSONObject> {
-
-/**
- * Defining Process dialog
- **/
+        /**
+         * Defining Process dialog
+         **/
         private ProgressDialog pDialog;
 
-        String email,password,fname,lname,uname;
+        String email,password,fname,lname;
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -250,65 +248,65 @@ public class Register extends Activity {
         @Override
         protected JSONObject doInBackground(String... args) {
 
-        UserFunctions userFunction = new UserFunctions();
+
+            UserFunctions userFunction = new UserFunctions();
             JSONObject json = null;
             try {
                 json = userFunction.registerUser(email,password,fname,lname);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
+            System.out.println("in do in background"+json);
             return json;
 
 
         }
-       @Override
+        @Override
         protected void onPostExecute(JSONObject json) {
-       /**
-        * Checks for success message.
-        **/
-           System.out.println(json);
-           if (1==1) {
-               registerErrorMsg.setText("");
-//                        String res = json.getString(KEY_SUCCESS);
-//
-//                        String red = json.getString(KEY_ERROR);
-                  if(1==1){
+            /**
+             * Checks for success message.
+             **/
+
+                if(1==1){
 //                        if(Integer.parseInt(res) == 1){
-                   pDialog.setTitle("Getting Data");
-                   pDialog.setMessage("Loading Info");
-
-                   registerErrorMsg.setText("Successfully Registered");
-
-
-                   DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-                   //JSONObject json_user = json.getJSONObject("user");
-
-                   /**
-                    * Removes all the previous data in the SQlite database
-                    **/
-
-                   UserFunctions logout = new UserFunctions();
-                   logout.logoutUser(getApplicationContext());
-                   //db.addUser(json_user.getString(KEY_FIRSTNAME),json_user.getString(KEY_LASTNAME),json_user.getString(KEY_EMAIL),json_user.getString(KEY_USERNAME),json_user.getString(KEY_UID),json_user.getString(KEY_CREATED_AT));
-                   /**
-                    * Stores registered data in SQlite Database
-                    * Launch Registered screen
-                    **/
-
-                   Intent registered = new Intent(getApplicationContext(), Registered.class);
-
-                   /**
-                    * Close all views before launching Registered screen
-                   **/
-                   registered.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                   pDialog.dismiss();
-                   startActivity(registered);
+                    pDialog.setTitle("Getting Data");
+                    pDialog.setMessage("Loading Info");
+                    registerErrorMsg.setText("Successfully Registered");
+                    DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+                    JSONObject json_user = json;
 
 
-                     finish();
-               }
+                    /**
+                     * Removes all the previous data in the SQlite database
+                     **/
 
+                    UserFunctions logout = new UserFunctions();
+                    logout.logoutUser(getApplicationContext());
+                    try {
+                        db.addUser(json_user.getString("firstName"),json_user.getString("lastName"),json_user.getString("email"),"100","0");
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    /**
+                     * Stores registered data in SQlite Database
+                     * Launch Registered screen
+                     **/
+
+                    Intent registered = new Intent(getApplicationContext(), Registered.class);
+
+                    /**
+                     * Close all views before launching Registered screen
+                     **/
+                    registered.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    pDialog.dismiss();
+                    startActivity(registered);
+
+
+                    finish();
+                }
+//check user sign up status
 //                        else if (Integer.parseInt(red) ==2){
 //                            pDialog.dismiss();
 //                            registerErrorMsg.setText("User already exists");
@@ -318,18 +316,15 @@ public class Register extends Activity {
 //                            registerErrorMsg.setText("Invalid Email id");
 //                        }
 
-           }
 
+            else{
+                pDialog.dismiss();
 
-               else{
-               pDialog.dismiss();
+                registerErrorMsg.setText("Error occured in registration");
+            }
 
-                   registerErrorMsg.setText("Error occured in registration");
-               }
-
-       }}
-        public void NetAsync(View view){
-            new NetCheck().execute();
         }}
-
+    public void NetAsync(View view){
+        new NetCheck().execute();
+    }}
 

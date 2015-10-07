@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+<TextView android:layout_width="282dp" 
+          android:layout_height="wrap_content" 
+          android:text="Ask a Question" 
+          android:id="@+id/title"
+          android:textSize="20dp" 
+          android:theme="@android:style/Animation" android:layout_weight="0.07"/>
+<TextView android:layout_width="136dp" android:layout_height="20dp" android:text="Question Title:" android:id="@+id/title2"
+          android:textSize="15dp" android:textStyle="bold|normal|italic" android:editable="false"
+          android:layout_weight="0.04"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTitle"/>
+    <TextView
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="Question Detail:"
+            android:id="@+id/textView8" android:textSize="15dp" android:textStyle="bold|normal|italic"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionContent" android:layout_weight="0.51"/>
+    <Button
+            android:layout_width="161dp"
+            android:layout_height="0dp"
+            android:text="Ask!"
+            android:id="@+id/postQuestion" android:layout_weight="0.19"/>
+</LinearLayout>

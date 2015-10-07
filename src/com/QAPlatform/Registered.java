@@ -1,4 +1,4 @@
-package com.learn2crack;
+package com.QAPlatform;
 
 /**
  * Author :Raj Amal
@@ -13,7 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.learn2crack.library.DatabaseHandler;
+import com.learn2crack.R;
+import com.QAPlatform.library.DatabaseHandler;
 
 import java.util.HashMap;
 
@@ -41,12 +42,10 @@ public class Registered extends Activity {
 
         final TextView fname = (TextView)findViewById(R.id.fname);
         final TextView lname = (TextView)findViewById(R.id.lname);
-        final TextView uname = (TextView)findViewById(R.id.uname);
         final TextView email = (TextView)findViewById(R.id.email);
         final TextView created_at = (TextView)findViewById(R.id.regat);
         fname.setText(user.get("fname"));
         lname.setText(user.get("lname"));
-        uname.setText(user.get("uname"));
         email.setText(user.get("email"));
         created_at.setText(user.get("created_at"));
 
